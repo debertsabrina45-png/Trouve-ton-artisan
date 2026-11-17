@@ -7,7 +7,7 @@ function Artisans({ recherche, categorie }) {
   const [erreur, setErreur] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/artisans')
+    fetch('https://trouve-ton-artisan-704z.onrender.com/api/artisans')
       .then((reponse) => {
         if (!reponse.ok) {
           throw new Error('Impossible de récupérer les artisans.')

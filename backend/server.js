@@ -10,9 +10,15 @@ dotenv.config();
 const sequelize = require('./config/database');
 
 const app = express();
+
+// Autorisation des connexions depuis le frontend local et Render
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: [
+        'http://localhost:5173',
+        'https://trouve-ton-artisan-frontend-6p6s.onrender.com'
+    ]
 }));
+
 const PORT = process.env.PORT || 3000;
 
 // Protection des en-têtes HTTP
