@@ -16,7 +16,7 @@ function ArtisanDetail() {
     setArtisan(null)
     setErreur('')
 
-    fetch(`http://localhost:3000/api/artisans/${id}`)
+    fetch(`https://trouve-ton-artisan-704z.onrender.com/api/artisans/${id}`)
       .then((reponse) => {
         if (!reponse.ok) {
           throw new Error('Artisan introuvable.')
@@ -51,8 +51,6 @@ function ArtisanDetail() {
   // Envoyer un message à l'artisan
   function envoyerMessage(event) {
     event.preventDefault()
-
-    alert('Le bouton fonctionne !')
 
     if (!artisan.email) {
       setErreur('Cet artisan ne possède pas d’adresse e-mail renseignée.')
@@ -176,4 +174,3 @@ function ArtisanDetail() {
 }
 
 export default ArtisanDetail
-
