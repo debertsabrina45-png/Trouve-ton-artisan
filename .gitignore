@@ -1,0 +1,11 @@
+
+# Fichiers de configuration et mots de passe
+.env
+.env.*
+
+# Dépendances Node.js
+node_modules/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
